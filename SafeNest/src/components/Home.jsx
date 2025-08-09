@@ -4,6 +4,29 @@ import { useNavigate } from 'react-router-dom';
 function Home() {
   const navigate = useNavigate();
 
+  const steps = [
+    {
+      label: 'Create Your Account',
+      icon: '/icons/create-account.png',
+      alt: 'Create Account',
+    },
+    {
+      label: 'Create Folders',
+      icon: '/icons/create-folders.png',
+      alt: 'Create Folders',
+    },
+    {
+      label: 'Upload Files',
+      icon: '/icons/upload-files.png',
+      alt: 'Upload Files',
+    },
+    {
+      label: 'Access Anywhere',
+      icon: '/icons/access-anywhere.png',
+      alt: 'Access Anywhere',
+    },
+  ];
+
   return (
     <>
       {/* HERO */}
@@ -40,29 +63,12 @@ function Home() {
         <h3 className="how-title">How This App Works</h3>
 
         <div className="how-grid">
-          <div className="how-card">
-            <img className="how-icon large" src="/icons/create-account.png" alt="Create Account" />
-            <h4>Create Your Account</h4>
-            <p>Sign up securely to start storing your documents and photos.</p>
-          </div>
-
-          <div className="how-card">
-            <img className="how-icon large" src="/icons/create-folders.png" alt="Create Folders" />
-            <h4>Create Folders</h4>
-            <p>Organize your uploads into folders like “Files” and “Photos”.</p>
-          </div>
-
-          <div className="how-card">
-            <img className="how-icon large" src="/icons/upload-files.png" alt="Upload Files" />
-            <h4>Upload Files</h4>
-            <p>Upload your documents and photos into the right folders.</p>
-          </div>
-
-          <div className="how-card">
-            <img className="how-icon large" src="/icons/access-anywhere.png" alt="Access Anywhere" />
-            <h4>Access Anywhere</h4>
-            <p>Your files are safe and available wherever you go.</p>
-          </div>
+          {steps.map((step, index) => (
+            <div key={index} className="how-card">
+              <img className="how-icon medium" src={step.icon} alt={step.alt} />
+              <h4>{step.label}</h4>
+            </div>
+          ))}
         </div>
       </section>
     </>
