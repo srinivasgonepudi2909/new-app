@@ -5,44 +5,78 @@ function Home() {
   const navigate = useNavigate();
 
   return (
-    <main className="container hero" style={{ maxHeight: '520px', overflow: 'hidden' }}>
-      <div className="hero-text" style={{ maxWidth: '500px' }}>
-        <h1 style={{ fontSize: '38px', lineHeight: '1.25' }}>
-          Your Personal, Secure Document & Photo Vault
-        </h1>
-        <p style={{ fontSize: '16px' }}>
-          Upload once, access anywhere. Keep your memories and documents safe — forever.
-        </p>
+    <>
+      {/* HERO */}
+      <section className="hero container">
+        <div className="hero-left">
+          <h1 className="hero-title">
+            Your Personal, Secure<br />Document & Photo Vault
+          </h1>
 
-        <div className="cta">
-          <button className="btn" onClick={() => navigate('/signup')}>
-            Get Started Free
-          </button>
-          <button
-            className="btn btn--ghost"
-            onClick={() => alert('Demo coming soon!')}
-          >
-            Watch Demo
-          </button>
+          <p className="hero-sub">
+            Upload once, access anywhere. Keep your memories and documents safe — forever.
+          </p>
+
+          <div className="hero-cta">
+            <button className="btn btn--lg" onClick={() => navigate('/signup')}>
+              Get Started Free
+            </button>
+            <button
+              className="btn btn--ghost btn--lg"
+              onClick={() => alert('Demo coming soon!')}
+            >
+              Watch Demo
+            </button>
+          </div>
         </div>
-      </div>
 
-      <div className="hero-art" style={{ textAlign: 'center' }}>
-        <img
-          src="/images/hero-illustration.png"
-          alt="SafeNest secure vault illustration"
-          className="hero-img"
-          style={{ maxWidth: '90%', maxHeight: '360px', height: 'auto' }}
-          onError={(e) => {
-            e.target.style.display = 'none';
-            const placeholder = document.createElement('div');
-            placeholder.className = 'hero-placeholder';
-            placeholder.innerText = 'Illustration';
-            e.target.parentNode.appendChild(placeholder);
-          }}
-        />
-      </div>
-    </main>
+        <div className="hero-right">
+          <div className="hero-illustration">
+            {/* base house/scene */}
+            <img src="/images/hero-illustration.png" alt="SafeNest vault" />
+
+            {/* floating chips */}
+            <img className="chip chip--pdf"    src="/icons/pdf-badge.svg"   alt="PDF" />
+            <img className="chip chip--photo"  src="/icons/photo-chip.svg"  alt="Photo" />
+            <img className="chip chip--lock"   src="/icons/lock-chip.svg"   alt="Lock" />
+            <img className="chip chip--folder" src="/icons/folder-chip.svg" alt="Folder" />
+            <img className="chip chip--laptop" src="/icons/laptop-chip.svg" alt="Laptop" />
+          </div>
+        </div>
+      </section>
+
+      {/* HOW IT WORKS */}
+      <section className="how container">
+        <h3 className="how-title">HOW IT WORKS</h3>
+
+        <ol className="how-steps">
+          <li className="how-step">
+            <img className="how-icon" src="/icons/user.svg" alt="" />
+            <div className="how-text">
+              <h4>1. Create your personal<br/>SafeNest account</h4>
+            </div>
+          </li>
+
+          <li className="how-arrow" aria-hidden>→</li>
+
+          <li className="how-step">
+            <img className="how-icon" src="/icons/folder-plus.svg" alt="" />
+            <div className="how-text">
+              <h4>2. Make folders —<br/>'PAN Card: Passport', 'Family Pics'</h4>
+            </div>
+          </li>
+
+          <li className="how-arrow" aria-hidden>→</li>
+
+          <li className="how-step">
+            <img className="how-icon" src="/icons/upload.svg" alt="" />
+            <div className="how-text">
+              <h4>3. Upload docs/photos once — view them anywhere</h4>
+            </div>
+          </li>
+        </ol>
+      </section>
+    </>
   );
 }
 
