@@ -1,108 +1,82 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function Badge({ text }) {
-  return <span className="badge">{text}</span>;
-}
-
-function Stat({ big, small }) {
-  return (
-    <div className="stat">
-      <div className="stat__big">{big}</div>
-      <div className="stat__small">{small}</div>
-    </div>
-  );
-}
-
 function Home() {
   const navigate = useNavigate();
 
   return (
     <>
       {/* HERO */}
-      <section className="hero container hero--wow">
-        {/* LEFT */}
+      <section className="hero container">
+        {/* LEFT: headline + copy + CTAs */}
         <div className="hero-left">
-          <div className="brand-hero">
-            <img src="/images/logo.png" alt="SafeNest" className="brand-hero__logo" />
-            <span className="brand-hero__name">SafeNest</span>
-          </div>
-
           <h1 className="hero-title">
             Your Personal, Secure<br />Document & Photo Vault
           </h1>
 
           <p className="hero-sub">
-            Upload once, access anywhere. Your documents and photos stay private to you —
-            protected with enterprise-grade security.
+            Upload once, access anywhere. Keep your memories and documents safe — forever.
           </p>
 
           <div className="hero-cta">
-            <button className="btn btn--lg btn--pulse" onClick={() => navigate('/signup')}>
+            <button className="btn btn--lg" onClick={() => navigate('/signup')}>
               Get Started Free
             </button>
-            <button className="btn btn--ghost btn--lg" onClick={() => alert('Demo coming soon!')}>
+            <button
+              className="btn btn--ghost btn--lg"
+              onClick={() => alert('Demo coming soon!')}
+            >
               Watch Demo
             </button>
           </div>
-
-          {/* Trust badges */}
-          <div className="badges">
-            <Badge text="AES-256 encryption" />
-            <Badge text="Zero-knowledge design" />
-            <Badge text="2-Factor ready" />
-          </div>
-
-          {/* Stats strip */}
-          <div className="stats">
-            <Stat big="10k+" small="happy users" />
-            <Stat big="99.99%" small="uptime" />
-            <Stat big="1M+" small="files secured" />
-          </div>
         </div>
 
-        {/* RIGHT — clean illustration only */}
+        {/* RIGHT: illustration + floating chips */}
         <div className="hero-right">
-          <div className="hero-illustration hero-illustration--solid card-float">
+          <div className="hero-illustration">
+            {/* base illustration */}
             <img src="/images/hero-illustration.png" alt="SafeNest vault" />
+
+            {/* floating chips */}
+            <img className="chip chip--pdf"    src="/icons/pdf-badge.svg"   alt="PDF" />
+            <img className="chip chip--photo"  src="/icons/photo-chip.svg"  alt="Photo" />
+            <img className="chip chip--lock"   src="/icons/lock-chip.svg"   alt="Lock" />
+            <img className="chip chip--folder" src="/icons/folder-chip.svg" alt="Folder" />
+            <img className="chip chip--laptop" src="/icons/laptop-chip.svg" alt="Laptop" />
           </div>
         </div>
       </section>
 
       {/* HOW IT WORKS */}
-      <section className="container how how--wow">
+      <section className="how container">
         <h3 className="how-title">HOW IT WORKS</h3>
 
-        <ol className="how-steps grid-3">
-          <li className="how-step glow">
-            <img className="how-icon how-icon--blue" src="/icons/user.svg" alt="" />
+        <ol className="how-steps">
+          <li className="how-step">
+            <img className="how-icon" src="/icons/user.svg" alt="" />
             <div className="how-text">
               <h4>1. Create your personal SafeNest account</h4>
-              <p className="muted">Sign up in seconds — no credit card required.</p>
             </div>
           </li>
 
-          <li className="how-step glow">
-            <img className="how-icon how-icon--blue" src="/icons/folder-plus.svg" alt="" />
+          <li className="arrow" aria-hidden>→</li>
+
+          <li className="how-step">
+            <img className="how-icon" src="/icons/folder-plus.svg" alt="" />
             <div className="how-text">
-              <h4>2. Make folders</h4>
-              <p className="muted">‘PAN Card’, ‘Passport’, ‘Family Pics’ — keep life tidy.</p>
+              <h4>2. Make folders — 'PAN Card: Passport', 'Family Pics'</h4>
             </div>
           </li>
 
-          <li className="how-step glow">
-            <img className="how-icon how-icon--blue" src="/icons/upload.svg" alt="" />
+          <li className="arrow" aria-hidden>→</li>
+
+          <li className="how-step">
+            <img className="how-icon" src="/icons/upload.svg" alt="" />
             <div className="how-text">
-              <h4>3. Upload once — view anywhere</h4>
-              <p className="muted">Your vault works on laptop, tablet, and phone.</p>
+              <h4>3. Upload docs/photos once — view them anywhere</h4>
             </div>
           </li>
         </ol>
-
-        {/* Bottom CTA */}
-        <div className="how-cta">
-          <button className="btn btn--lg" onClick={() => navigate('/signup')}>Create Free Account</button>
-        </div>
       </section>
     </>
   );
