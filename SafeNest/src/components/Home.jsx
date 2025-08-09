@@ -8,22 +8,22 @@ function Home() {
     {
       label: 'Create Your Account',
       icon: '/icons/create-account.png',
-      alt: 'Create Account',
+      //alt: 'Create Account',
     },
     {
       label: 'Create Folders',
       icon: '/icons/create-folders.png',
-      alt: 'Create Folders',
+      //alt: 'Create Folders',
     },
     {
       label: 'Upload Files',
       icon: '/icons/upload-files.png',
-      alt: 'Upload Files',
+      //alt: 'Upload Files',
     },
     {
       label: 'Access Anywhere',
       icon: '/icons/access-anywhere.png',
-      alt: 'Access Anywhere',
+      //alt: 'Access Anywhere',
     },
   ];
 
