@@ -143,6 +143,29 @@ body {
 .how-icon { width: 42px; height: 42px; }
 .how-text h4 { margin: 0; font-size: 16px; line-height: 1.35; }
 
+/* ---------- Blue Logs Styling ---------- */
+.blue-log {
+  background: #e6f0ff;
+  border: 1px solid #b3d1ff;
+  box-shadow: 0 2px 6px rgba(30, 102, 255, 0.1);
+}
+.blue-log h4 {
+  color: #1e66ff;
+  margin-bottom: 4px;
+}
+.blue-log p {
+  margin: 0;
+  font-size: 14px;
+  color: #334e7c;
+}
+
+/* ---------- Yellow Arrow Styling ---------- */
+.yellow-arrow {
+  color: #f5b800;
+  font-weight: bold;
+  font-size: 28px;
+}
+
 /* ---------- Forms (Login / Signup) ---------- */
 .form-container {
   max-width: 460px; margin: 40px auto; padding: 22px;

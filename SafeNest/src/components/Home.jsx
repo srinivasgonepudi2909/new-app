@@ -41,31 +41,34 @@ function Home() {
 
       {/* HOW IT WORKS */}
       <section className="how container">
-        <h3 className="how-title">HOW IT WORKS</h3>
+        <h3 className="how-title">BLUE LOGS</h3>
 
         <ol className="how-steps">
-          <li className="how-step">
+          <li className="how-step blue-log">
             <img className="how-icon" src="/icons/user.svg" alt="" />
             <div className="how-text">
               <h4>1. Create your personal SafeNest account</h4>
+              <p>Sign up securely to start storing your documents and photos.</p>
             </div>
           </li>
 
-          <li className="arrow" aria-hidden>→</li>
+          <li className="arrow yellow-arrow" aria-hidden>→</li>
 
-          <li className="how-step">
+          <li className="how-step blue-log">
             <img className="how-icon" src="/icons/folder-plus.svg" alt="" />
             <div className="how-text">
               <h4>2. Make folders — 'PAN Card: Passport', 'Family Pics'</h4>
+              <p>Organize your uploads into meaningful categories.</p>
             </div>
           </li>
 
-          <li className="arrow" aria-hidden>→</li>
+          <li className="arrow yellow-arrow" aria-hidden>→</li>
 
-          <li className="how-step">
+          <li className="how-step blue-log">
             <img className="how-icon" src="/icons/upload.svg" alt="" />
             <div className="how-text">
               <h4>3. Upload docs/photos once — view them anywhere</h4>
+              <p>Access your files from any device, anytime.</p>
             </div>
           </li>
         </ol>
