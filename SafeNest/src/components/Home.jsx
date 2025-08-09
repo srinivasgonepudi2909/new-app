@@ -4,27 +4,11 @@ import { useNavigate } from 'react-router-dom';
 function Home() {
   const navigate = useNavigate();
 
-  const steps = [
-    {
-      label: 'Create Your Account',
-      icon: '/icons/create-account.png',
-      //alt: 'Create Account',
-    },
-    {
-      label: 'Create Folders',
-      icon: '/icons/create-folders.png',
-      //alt: 'Create Folders',
-    },
-    {
-      label: 'Upload Files',
-      icon: '/icons/upload-files.png',
-      //alt: 'Upload Files',
-    },
-    {
-      label: 'Access Anywhere',
-      icon: '/icons/access-anywhere.png',
-      //alt: 'Access Anywhere',
-    },
+  const icons = [
+    '/icons/create-account.png',
+    '/icons/create-folders.png',
+    '/icons/upload-files.png',
+    '/icons/access-anywhere.png',
   ];
 
   return (
@@ -63,10 +47,9 @@ function Home() {
         <h3 className="how-title">How This App Works</h3>
 
         <div className="how-grid">
-          {steps.map((step, index) => (
+          {icons.map((src, index) => (
             <div key={index} className="how-card">
-              <img className="how-icon xlarge" src={step.icon} alt={step.alt} />
-              <h4>{step.label}</h4>
+              <img className="how-icon only" src={src} alt={`Step ${index + 1}`} />
             </div>
           ))}
         </div>
