@@ -15,29 +15,40 @@ function Home() {
     <>
       {/* HERO */}
       <section className="hero container">
-        <div className="hero-left">
-          <h1 className="hero-title">
-            Your Personal, Secure<br />Document & Photo Vault
-          </h1>
-          <p className="hero-sub">
-            Upload once, access anywhere. Keep your memories and documents safe — forever.
-          </p>
-          <div className="hero-cta">
-            <button className="btn btn--lg" onClick={() => navigate('/signup')}>
-              Get Started Free
-            </button>
-            <button
-              className="btn btn--ghost btn--lg"
-              onClick={() => alert('Demo coming soon!')}
-            >
-              Watch Demo
-            </button>
+        <div className="hero-grid">
+          {/* Left: Headline */}
+          <div className="hero-left">
+            <h1 className="hero-title">
+              Your Personal, Secure<br />Document & Photo Vault
+            </h1>
           </div>
-        </div>
 
-        <div className="hero-right">
-          <div className="hero-illustration">
-            <img src="/images/hero-illustration.png" alt="SafeNest vault" />
+          {/* Center: Subtext + CTA */}
+          <div className="hero-center">
+            <p className="hero-sub">
+              Upload once, access anywhere. Keep your memories and documents safe — forever.
+            </p>
+            <div className="hero-cta">
+              <button className="btn btn--lg" onClick={() => navigate('/signup')}>
+                Get Started Free
+              </button>
+              <button
+                className="btn btn--ghost btn--lg"
+                onClick={() => alert('Demo coming soon!')}
+              >
+                Watch Demo
+              </button>
+            </div>
+          </div>
+
+          {/* Right: Logo + Illustration */}
+          <div className="hero-right">
+            <div className="hero-logo">
+              <img src="/images/safenest-logo.svg" alt="SafeNest Logo" />
+            </div>
+            <div className="hero-illustration">
+              <img src="/images/hero-illustration.png" alt="SafeNest vault" />
+            </div>
           </div>
         </div>
       </section>
