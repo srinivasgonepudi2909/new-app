@@ -54,24 +54,55 @@
   
   /* ---------- Home / Hero ---------- */
   .hero {
-    display: grid; grid-template-columns: 1.05fr .95fr;
-    gap: 24px; align-items: center; padding: 28px 16px;
-  }
-  .hero-text h1 {
-    margin: 6px 0 10px; font-size: 36px; line-height: 1.2;
-  }
-  .hero-text p {
-    margin: 0 0 14px; color: var(--muted);
-  }
-  .cta { display: flex; gap: 10px; flex-wrap: wrap; }
-  
-  .hero-art { display: grid; place-items: center; }
-  .hero-placeholder {
-    width: 100%; min-height: 240px; border-radius: 14px;
-    background: linear-gradient(180deg, #eaf1ff, #dfe8ff);
-    border: 1px solid var(--line);
-    color: #2b4ea2; display: grid; place-items: center; font-weight: 700;
-  }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  padding: 20px 16px;
+  max-height: 520px; /* Limit total hero height */
+  overflow: hidden;
+}
+
+.hero-text h1 {
+  margin: 6px 0 10px;
+  font-size: 28px; /* Reduced from 36px */
+  line-height: 1.2;
+}
+
+.hero-text p {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 15px; /* Slightly smaller */
+}
+
+.cta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.hero-art {
+  display: grid;
+  place-items: center;
+}
+
+.hero-art img {
+  max-width: 90%;
+  max-height: 360px; /* Prevents oversized images */
+  height: auto;
+}
+
+.hero-placeholder {
+  width: 100%;
+  min-height: 200px;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #eaf1ff, #dfe8ff);
+  border: 1px solid var(--line);
+  color: #2b4ea2;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+}
   
   /* ---------- Forms (Login / Signup) ---------- */
   .form-container {
