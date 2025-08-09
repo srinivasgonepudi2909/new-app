@@ -26,7 +26,7 @@ function Home() {
           {/* Center: Cartoon Logo */}
           <div className="hero-center">
             <div className="hero-illustration">
-              <img src="/images/safenest-cartoon.png" alt="SafeNest cartoon logo" />
+              <img src="/images/hero-illustration.png" alt="SafeNest cartoon logo" />
             </div>
           </div>
 
