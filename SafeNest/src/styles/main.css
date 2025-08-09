@@ -59,7 +59,7 @@ body {
   gap: 28px;
   align-items: center;
   padding: 32px 12px 24px;
-  max-height: 520px;              /* keep hero compact */
+  max-height: 520px;
   overflow: hidden;
 }
 .hero-left { padding: 6px 8px; }
@@ -94,16 +94,18 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: .22;                     /* faded base so chips pop */
+  opacity: .22;
 }
 
-/* Floating chips */
+/* Floating chips (hidden) */
 .chip { position: absolute; display: block; }
-.chip--pdf    { top: 14%; right: 6%;  width: 64px; height: 64px; }
-.chip--photo  { top: 9%;  left: 9%;  width: 64px; height: 64px; }
-.chip--lock   { bottom: 10%; right: 18%; width: 54px; height: 54px; }
-.chip--folder { bottom: 16%; left: 10%; width: 64px; height: 64px; }
-.chip--laptop { bottom: -4px; right: -8px; width: 120px; height: auto; }
+.chip--pdf,
+.chip--photo,
+.chip--lock,
+.chip--folder,
+.chip--laptop {
+  display: none;
+}
 
 /* ---------- HOW IT WORKS ---------- */
 .how { padding: 28px 12px 48px; }

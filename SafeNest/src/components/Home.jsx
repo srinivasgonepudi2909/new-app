@@ -31,18 +31,10 @@ function Home() {
           </div>
         </div>
 
-        {/* RIGHT: illustration + floating chips */}
+        {/* RIGHT: illustration only */}
         <div className="hero-right">
           <div className="hero-illustration">
-            {/* base illustration */}
             <img src="/images/hero-illustration.png" alt="SafeNest vault" />
-
-            {/* floating chips */}
-            <img className="chip chip--pdf"    src="/icons/pdf-badge.svg"   alt="PDF" />
-            <img className="chip chip--photo"  src="/icons/photo-chip.svg"  alt="Photo" />
-            <img className="chip chip--lock"   src="/icons/lock-chip.svg"   alt="Lock" />
-            <img className="chip chip--folder" src="/icons/folder-chip.svg" alt="Folder" />
-            <img className="chip chip--laptop" src="/icons/laptop-chip.svg" alt="Laptop" />
           </div>
         </div>
       </section>
