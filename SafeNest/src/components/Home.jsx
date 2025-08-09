@@ -65,7 +65,7 @@ function Home() {
         <div className="how-grid">
           {steps.map((step, index) => (
             <div key={index} className="how-card">
-              <img className="how-icon medium" src={step.icon} alt={step.alt} />
+              <img className="how-icon xlarge" src={step.icon} alt={step.alt} />
               <h4>{step.label}</h4>
             </div>
           ))}

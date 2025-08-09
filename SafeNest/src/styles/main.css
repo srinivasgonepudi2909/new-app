@@ -130,7 +130,7 @@ body {
 
 .how-card {
   width: 180px;
-  height: 120px;
+  height: 160px;
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 12px;
@@ -148,14 +148,14 @@ body {
 }
 
 .how-icon {
-  width: 48px;
-  height: 48px;
-  margin-bottom: 8px;
+  width: 144px;
+  height: 144px;
+  margin-bottom: 12px;
   object-fit: contain;
 }
 
 .how-card h4 {
-  font-size: 15.5px;
+  font-size: 16px;
   margin: 0;
   color: var(--brand);
   font-weight: 600;
@@ -215,11 +215,11 @@ input:focus { border-color: var(--brand); box-shadow: 0 0 0 3px rgba(30,102,255,
   .how-card {
     width: 100%;
     max-width: 280px;
-    height: 140px;
+    height: 180px;
   }
   .how-icon {
-    width: 56px;
-    height: 56px;
+    width: 120px;
+    height: 120px;
   }
   .how-card h4 {
     font-size: 16px;
