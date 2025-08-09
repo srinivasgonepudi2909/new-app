@@ -23,31 +23,20 @@ function Home() {
             </h1>
           </div>
 
-          {/* Center: Subtext + CTA */}
+          {/* Center: Cartoon Logo */}
           <div className="hero-center">
-            <p className="hero-sub">
-              Upload once, access anywhere. Keep your memories and documents safe — forever.
-            </p>
-            <div className="hero-cta">
-              <button className="btn btn--lg" onClick={() => navigate('/signup')}>
-                Get Started Free
-              </button>
-              <button
-                className="btn btn--ghost btn--lg"
-                onClick={() => alert('Demo coming soon!')}
-              >
-                Watch Demo
-              </button>
+            <div className="hero-illustration">
+              <img src="/images/safenest-cartoon.png" alt="SafeNest cartoon logo" />
             </div>
           </div>
 
-          {/* Right: Logo + Illustration */}
+          {/* Right: Rotating Icons */}
           <div className="hero-right">
-            <div className="hero-logo">
-              <img src="/images/safenest-logo.svg" alt="SafeNest Logo" />
-            </div>
-            <div className="hero-illustration">
-              <img src="/images/hero-illustration.png" alt="SafeNest vault" />
+            <div className="rotating-icons">
+              <img src="/icons/pdf.png" alt="PDF" className="rotating-icon" />
+              <img src="/icons/photo.png" alt="Photo" className="rotating-icon" />
+              <img src="/icons/id-card.png" alt="ID Card" className="rotating-icon" />
+              <img src="/icons/folder.png" alt="Folder" className="rotating-icon" />
             </div>
           </div>
         </div>
